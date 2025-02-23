@@ -1,0 +1,14 @@
+1.0.8:
+ - Start:2025/2/08 Over:2025/2/
+ - 内容:
+  - 在 ANSportion.py 的文件中新增功能: 支持使用 command(cmd) / 更绝佳的可观性
+  - 增加了 virus-3.0.py 文件
+  - 增加了 virus-3.1.py 文件
+  - 在 attack-1.py 的文件中新增功能: 支持使用 多个端口进行攻击
+  - 在 port-1.py 的文件中新增功能: 增加了 提示
+ - 修改过或新增的文件:
+  - ANSportion.py - 修改
+  - virus-3.0.py - 新增
+  - virus-3.1.py - 新增
+  - attack-1.py - 修改
+  - port-1.py - 修改
