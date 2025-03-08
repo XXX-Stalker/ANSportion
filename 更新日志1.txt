@@ -1,17 +1,13 @@
-1.1.0:
+1.1.1:
  - 内容:
-  - 在 ANSportion.py 的文件中修改了功能: 将整体代码更改
-  - 在 crawler_3.py 的文件中修改内容:将整体代码更改，让其有更好的观赏性
-  - 在 install_library.py 的文件中修改内容:增加了 threading 模块
-  - 在 port_1.py 的文件中修改内容:修改了 线程自定义数量，限制了线程数量避免死机
-  - 修改了 check_4.py 文件的名称 (原名:crawler_3.py)
-  - 在 target.html 的文件中修改内容:修改了 线程自定义数量，限制了线程数量避免死机
+  - 在 ANSportion.py 的文件中修复了BUG
+  - 在 attack_1.py 的文件中修复了BUG
+  - 新增了 attack_2.py 的文件
+  - 在 check_3.py 的文件中修复了BUG
  - 修改过或新增的文件:
   - ANSportion.py - 修改
-  - crawler_3.py - 修改
-  - install_library.py - 修改
-  - port_1.py - 修改
-  - check_4.py - 修改
-  - check_2.py - 删除
-  - check_1.py - 修改名称
-  - target.html - 修改
+  - attack_1.py - 修改
+  - attack_2.py - 增加
+  - Install_library.py - 删除
+  - virus-4.py - 增加
+  - check_3.py - 修改
