@@ -1,15 +1,13 @@
-1.1.5:
+1.1.6:
  - 内容:
   - 修复了 ANSportion.py 文件中的BUG
-  - 更新了 ANSportion.py 文件功能
-  - 修复了 Install_library.py 文件中的BUG和不需要的库
-  - 修复了 check_6.py 文件中的严重BUG
-  - 修复了 check_2.py 文件中的严重BUG
-  - 修复了 wiif_2.py 文件中的BUG
+  -  -  问题: 不能通过命令"log" "log all"查看日志文件错误
+  -  -  错误: 未将新日志文件后缀更新至 ANSportion.py 文件里面
  - 修改过或新增的文件:
   - ANSportion.py - 修改
-  - Install_library.py - 修改
-  - check_6.py - 修改
-  - check_2.py - 修改
-  - use_1.py - 新增
-  - wifi_2.py - 修改
+  - developer folder: *
+  -  - generate_dictionary.py - 新增
+  -  - Install_library.py - 修改
+  -  - SetUp.py - 新增
+  -  - wordart.py - 新增
+  -  - image.py - 新增
