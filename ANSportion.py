@@ -22,7 +22,7 @@ ANSportion1_5 = """                    |_|"""
 ANSportion2 = """
 ----------------------------------------------------------------------------
                                 XXX_Stalker
-                         版本 Version: 1.1.5 - pro
+                         版本 Version: 1.1.6 - pro
 ----------------------------------------------------------------------------
 切记不可用于任何非法用途！！!
 """
@@ -173,6 +173,8 @@ server_help = """
 system = platform.system()
 init()
 ANSportion_print_time_1 = 0.2
+# 获取当前工作目录的绝对路径
+current_file_path = os.path.abspath(__file__)
 
 #程序代码函数主体
 def program_code_body():
@@ -191,19 +193,19 @@ def program_code_body():
                 from Code.use_1 import use_1_main
                 use_1_main()
             elif program_input == "log":#查看更新日志
-                if os.path.exists("更新日志1.txt"):
-                    with open("更新日志1.txt", 'r', encoding='utf-8') as file:
+                if os.path.exists("更新日志1.ans"):
+                    with open("更新日志1.ans", 'r', encoding='utf-8') as file:
                         log_content = file.read()
-                    print("==================================================================\n更新日志内容:")
-                    print(log_content,"\n==================================================================")
+                    print(f"{'=' * 65}\n更新日志内容:")
+                    print(log_content,f"\n{'=' * 65}")
                 else:
                     print("更新日志文件不存在。")
             elif program_input == "log all":#查看所有的更新日志
-                if os.path.exists("更新日志2.txt"):
-                    with open("更新日志2.txt", 'r', encoding='utf-8') as file:
+                if os.path.exists("更新日志2.ans"):
+                    with open("更新日志2.ans", 'r', encoding='utf-8') as file:
                         log_content = file.read()
-                    print("==================================================================\n更新日志内容:")
-                    print(log_content,"\n==================================================================")
+                    print(f"{'=' * 65}\n更新日志内容:")
+                    print(log_content, f"\n{'=' * 65}")
                 else:
                     print("更新日志文件不存在。")
             elif program_input == "check l":#查看指定的库是否安装
@@ -335,11 +337,13 @@ if __name__ == "__main__":
     time.sleep(ANSportion_print_time_1)
     print(Fore.YELLOW + ANSportion2 + Fore.RESET)
     time.sleep(ANSportion_print_time_1)
+    print(Fore.CYAN + f"当前工作目录所在的绝对路径: {current_file_path}" + Fore.RESET)
+    time.sleep(ANSportion_print_time_1)
     if os.path.exists("更新日志1.ans"):
         with open("更新日志1.ans", 'r', encoding='utf-8') as file:
             log_content = file.read()
-        print(Fore.CYAN + "更新日志1:\n==================================================================\n更新日志内容:" + Fore.RESET)
-        print(Fore.CYAN + log_content,"\n==================================================================" + Fore.RESET)
+        print(Fore.CYAN + f"更新日志1:\n{'=' * 65}\n更新日志内容:" + Fore.RESET)
+        print(Fore.CYAN + log_content,f"\n{'=' * 65}" + Fore.RESET)
     else:
         print("更新日志文件不存在。")
     print(ANSportion3)
