@@ -28,11 +28,16 @@ Python version: 3.11
 5. You need to get a development license before development (process: enter the QQ group: 991478664, and apply for a development license from the XXX_STALKER)
 6. After running the software, you agree to this agreement by default
 
-## ANSportion如何安装可执行文件？
+## ANSportion如何安装可执行文件？(How does ANSportion install executable files?)
 **Windows:**
-[https://share.weiyun.com/L2mGNcPB](url)
+[https://share.weiyun.com/fqwqiuSK](url)
 
 **Linux:**
+暂时没有，但python所有的文件都适配了基本上所有的系统
+
+Not yet, but all Python files are compatible with basically all systems
+
+**Mac OS:**
 暂时没有，但python所有的文件都适配了基本上所有的系统
 
 Not yet, but all Python files are compatible with basically all systems
@@ -53,7 +58,7 @@ Enter the word "help" in the text box to view the help,As shown in Figure 1.1
 **图1.1**
 ![屏幕截图 2025-03-23 174628.png](https://raw.gitcode.com/XXX_Stalker/ANSportion-Pro/attachment/uploads/20108adb-1cde-4b3a-a9a3-838cafab9dde/屏幕截图_2025-03-23_174628.png '屏幕截图 2025-03-23 174628.png')
 
-## 怎么使用这些模块？
+## 怎么使用这些模块？(How can I use these modules?)
 
 在输入框中输入 [模块名]，这里输入的案例是"check"模块，如图1.2
 
