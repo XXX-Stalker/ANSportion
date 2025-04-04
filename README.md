@@ -29,6 +29,8 @@ Python version: 3.11
 6. After running the software, you agree to this agreement by default
 
 ## ANSportion如何安装可执行文件？(How does ANSportion install executable files?)
+**需要使用浏览器打开该网址!!!**
+
 **Windows:**
 [https://share.weiyun.com/fqwqiuSK](url)
 
