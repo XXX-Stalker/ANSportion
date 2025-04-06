@@ -8,9 +8,7 @@ import random
 #所有初始化
 system = platform.system()
 init()
-current_file_path = os.path.abspath(__file__)
-with open("ANSportion_version.txt", "r", encoding="utf-8") as f:
-    ANSportion_version = f.read()
+ANSportion_version = "1.1.7  -  Pro"
 
 #自定义导入文字
 ANSportion1_1 = """
@@ -506,7 +504,6 @@ if __name__ == "__main__":
 
     print(Fore.YELLOW + ANSportion2 + Fore.RESET)
     print(Fore.YELLOW + f"{'-' * 100}" + Fore.RESET)
-    print(Fore.CYAN + f"当前工作目录所在的绝对路径: {current_file_path}" + Fore.RESET)
     if os.path.exists("更新日志1.ans"):
         with open("更新日志1.ans", 'r', encoding='utf-8') as file:
             log_content = file.read()
