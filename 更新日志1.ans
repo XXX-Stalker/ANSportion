@@ -1,0 +1,16 @@
+1.1.7:
+ - 内容:
+  - ANSportion.py 修改了界面
+  - Code & 严重BUG:
+  -  -  问题: IP校准有误
+  -  -  错误: 未知!
+  -  -  解决情况: 删除
+  -  -  attack_2.py 文件支持自定义API接口了, 别再讲脚本拉垮了> M <
+  - 新增了插件功能!
+ - 修改过或新增的文件'&'或文件夹'*':
+  - ANSportion.py - 修改 &
+  - Install-library.py - 修改 &
+  - SetUp.py - 修改 &
+  - DOS - 新增 *
+  - CC - 新增 *
+  - Code - 修改 *
