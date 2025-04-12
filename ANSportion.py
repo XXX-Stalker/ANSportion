@@ -6,22 +6,97 @@ import platform
 import random
 
 #所有初始化
+plugins_tutorial = """欢迎 您 加入 ANSportion Plugins 计划。
+
+1. 首先我们需要一个引导文件，用于引导 ANSportion 去打开该引导文件的插件。
+
+引导文件格式：
+
+插件名用 'XXX' 代替
+文件名: XXX_guide.py
+--------------------------------------------------------------------------------------------------------
+def RUN():
+    print("插件 XXX 正在启动...")
+    print("正在检查插件的引导文件...")
+    
+    with open("plugins/plugins_list.txt", "r", encoding="utf-8") as f:
+        plu_list = f.readlines()
+        if len(plu_list) == "XXX":
+            if "XXX" in plu_list:
+                print("插件 XXX 的插件表存在")
+            else:
+                print("插件 XXX 的插件表不存在")
+                choose = input("是否创建插件 XXX 的插件表?(y/n)")
+                if choose in ["y", "Y"]:
+                    with open("plugins/plugins_list.txt", "a", encoding="utf-8") as f:
+                        f.write("XXX\n")
+                    print("插件 XXX 的插件表已成功创建")
+                else:
+                    print("插件 XXX 的插件表已取消创建")
+    print("尝试打开插件的引导文件...")
+    try:
+        import importlib
+        module = importlib.import_module("plugins.XXX.XXX_main")
+        XXX_run = getattr(module, "XXX_run")
+        XXX_run()
+    except Exception as e:
+        print(f"插件启动失败: {str(e)}")
+
+if __name__ == "__main__":
+    RUN()
+--------------------------------------------------------------------------------------------------------
+
+2. 写完引导文件之后需要配置插件的主程序文件。
+
+主程序文件的格式:
+
+插件名用 'XXX' 代替
+文件名: XXX_main.py
+--------------------------------------------------------------------------------------------------------
+[ 你的脚本 ]
+
+def XXX_run():
+    [ 你的脚本 ]
+
+if __name__ == "__main__":
+    print(f"{'-' * 48}\n\t\tANSportion 插件 [ 填写作者名字 ] \n{'-' * 48}")
+--------------------------------------------------------------------------------------------------------
+
+4. 最后在写入一个配置该插件的教程文件（用于帮助使用者更好的配置文件）。
+
+直接复制就好，修改插件名就好。
+文件名: config XXX.txt
+--------------------------------------------------------------------------------------------------------
+将 XXX_guide.py 文件移动至 plugins 文件夹里面。
+还需要在插件表里面配置该插件的环境，如何配置？
+    1. 可以在 ANSportion.py 文件中配置：
+        首先运行文件或它的EXE，然后输入指令 'plu' 打开名为 'plu' 的模块，在输入和 '配置指定插件的插件表' 相对应的序列号，
+        最后按照提示输入信息就可以配置成功了
+    2. 可以直接通过修改 插件表 来进行配置：
+        首先打开 plugins/plugins_list.txt 文件，在该文件最后一行输入该插件的名字，名字必须一模一样！（得保证最后一行是空的情况下！就是输入完记得回车！）
+--------------------------------------------------------------------------------------------------------
+
+5. 以上格式请严格遵循，否则 ANSportion 将无法识别该插件。
+
+欢迎所有创作者加入 ANSportion Plugins 计划。"""
+def init_ANS_plugins():
+    if not os.path.exists("plugins"):
+        os.mkdir("plugins")
+    elif not os.path.exists("plugins/plugins_list.txt"):
+        with open("plugins/plugins_list.txt", 'w', encoding='utf-8') as file:
+            file.write("")
+    elif not os.path.exists("plugins/plugins_tutorial.txt"):
+        with open("plugins/plugins_tutorial.txt", 'w', encoding='utf-8') as file:
+            file.write(plugins_tutorial)
+    else:
+        pass
 system = platform.system()
+init_ANS_plugins()
 init()
-ANSportion_version = "1.1.7  -  Pro"
+ANSportion_version = "1.1.8  -  Pro"
 
 #自定义导入文字
 ANSportion1_1 = """
-                     ___   _   _  _____                  _   _             
-                    / _ \ | \ | |/  ___|                | | (_)            
-                   / /_\ \|  \| |\ `--. _ __   ___  _ __| |_ _  ___  _ __  
-                   |  _  || . ` | `--. \ '_ \ / _ \| '__| __| |/ _ \| '_ \ 
-                   | | | || |\  |/\__/ / |_) | (_) | |  | |_| | (_) | | | |
-                   \_| |_/\_| \_/\____/| .__/ \___/|_|   \__|_|\___/|_| |_|
-                                       |_|                                 
-"""
-
-ANSportion1_2 = """
      ▄▄▄       ███▄    █   ██████  ██▓███   ▒█████   ██▀███  ▄▄▄█████▓ ██▓ ▒█████   ███▄    █ 
     ▒████▄     ██ ▀█   █ ▒██    ▒ ▓██░  ██▒▒██▒  ██▒▓██ ▒ ██▒▓  ██▒ ▓▒▓██▒▒██▒  ██▒ ██ ▀█   █ 
     ▒██  ▀█▄  ▓██  ▀█ ██▒░ ▓██▄   ▓██░ ██▓▒▒██░  ██▒▓██ ░▄█ ▒▒ ▓██░ ▒░▒██▒▒██░  ██▒▓██  ▀█ ██▒
@@ -33,7 +108,7 @@ ANSportion1_2 = """
           ░  ░         ░       ░               ░ ░     ░               ░      ░ ░           ░ 
 """
 
-ANSportion1_3 = '''
+ANSportion1_2 = '''
                                                                          ,,  
         db      `7MN.   `7MF'.M"""bgd                             mm     db  
        ;MM:       MMN.    M ,MI    "Y                             MM         
@@ -476,7 +551,7 @@ def program_code_body():
 
             else:
                 try:
-                    from plugins.plugins import run_plugins
+                    from Code.plugins import run_plugins
                     target_line = program_input
                     run_plugins(target_line)
                 except FileNotFoundError:
@@ -492,15 +567,23 @@ if __name__ == "__main__":
     print("正在检查当前系统")
     os.system("cls" if os.name == 'nt' else 'clear')
     print(f"当前系统为: {system}")
+    if system in ["Windows", "Linux", "Darwin"]:
+        pass
+    else:
+        print("该系统不支持运行此程序")
+        print("是否继续运行?(y/n)")
+        choose = input(":")
+        if choose in ["y", "Y"]:
+            pass
+        else:
+            sys.exit()
     os.system("cls" if os.name == 'nt' else 'clear')
 
-    ANSportion_title_random = random.randint(1, 3)
+    ANSportion_title_random = random.randint(1, 2)
     if ANSportion_title_random == 1:
         print(Fore.YELLOW + ANSportion1_1 + Fore.RESET)
     elif ANSportion_title_random == 2:
         print(Fore.YELLOW + ANSportion1_2 + Fore.RESET)
-    elif ANSportion_title_random == 3:
-        print(Fore.YELLOW + ANSportion1_3 + Fore.RESET)
 
     print(Fore.YELLOW + ANSportion2 + Fore.RESET)
     print(Fore.YELLOW + f"{'-' * 100}" + Fore.RESET)
