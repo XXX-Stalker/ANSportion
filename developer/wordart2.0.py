@@ -3,20 +3,7 @@ import os
 import time
 import sys
 
-class ASCIIArtGenerator:
-    """
-    ASCII 艺术字生成器
-    
-    功能：
-    - 支持200+种ASCII艺术字体
-    - 实时预览效果
-    - 保存生成结果到文件
-    - 交互式菜单系统
-    
-    依赖库：
-    - pyfiglet
-    """
-    
+class ASCIIArtGenerator:    
     def __init__(self):
         """初始化生成器"""
         self.available_fonts = pyfiglet.FigletFont.getFonts()
