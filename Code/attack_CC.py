@@ -2,22 +2,21 @@ import os
 import sys
 
 #所有初始化
-with open("CC\\CC_version.txt", "r") as f:
-    version = f.read()
-    
+version = "1.0.0"
 
-title = f"""
- _____  _____    ___ _____ _____ ___  _____  _   __
-/  __ \/  __ \  / _ \_   _|_   _/ _ \/  __ \| | / /
-| /  \/| /  \/ / /_\ \| |   | |/ /_\ \ /  \/| |/ / 
-| |    | |     |  _  || |   | ||  _  | |    |    \ 
-| \__/\| \__/\ | | | || |   | || | | | \__/\| |\  \ 
- \____/ \____/ \_| |_/\_/   \_/\_| |_/\____/\_| \_/
+title = f'''
+MM'""""'YMM MM'""""'YMM MMP"""""""MM M""""""""M M""""""""M MMP"""""""MM MM'""""'YMM M""MMMMM""M
+M' .mmm. `M M' .mmm. `M M' .mmmm  MM Mmmm  mmmM Mmmm  mmmM M' .mmmm  MM M' .mmm. `M M  MMMM' .M
+M  MMMMMooM M  MMMMMooM M         `M MMMM  MMMM MMMM  MMMM M         `M M  MMMMMooM M       .MM
+M  MMMMMMMM M  MMMMMMMM M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM M  MMMMMMMM M  MMMb. YM
+M. `MMM' .M M. `MMM' .M M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM M. `MMM' .M M  MMMMb  M
+MM.     .dM MM.     .dM M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM MM.     .dM M  MMMMM  M
+MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMMM MMMMMMMMMM MMMMMMMMMM MMMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM 
 
 XXX_Stalker
 当前版本: {version}
 输入 'help' 查看帮助
-{"=" * 52}"""
+{"=" * 95}'''
 
 help = """
 [帮助信息]
@@ -62,6 +61,7 @@ def attack_cc_main():
             elif while_input == "2":
                 from CC.thread_cc import thread_cc_main
                 thread_cc_main()
-    elif confirm in ['n', 'no']:
+    else:
         print("已拒绝")
+        os.system("cls" if os.name == 'nt' else "clear")
         sys.exit()
