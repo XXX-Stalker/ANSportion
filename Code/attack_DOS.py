@@ -2,22 +2,21 @@ import os
 import sys
 
 #所有初始化
-with open("DOS\\DOS_version.txt", "r") as f:
-    version = f.read()
-    
+version = "1.0.0"
 
-title = f"""
-______ _____ _____    ___ _____ _____ ___  _____  _   __
-|  _  \  _  /  ___|  / _ \_   _|_   _/ _ \/  __ \| | / /
-| | | | | | \ `--.  / /_\ \| |   | |/ /_\ \ /  \/| |/ / 
-| | | | | | |`--. \ |  _  || |   | ||  _  | |    |    \ 
-| |/ /\ \_/ /\__/ / | | | || |   | || | | | \__/\| |\  \ 
-|___/  \___/\____/  \_| |_/\_/   \_/\_| |_/\____/\_| \_/
+title = f'''
+M""""""'YMM MMP"""""YMM MP""""""`MM MMP"""""""MM M""""""""M M""""""""M MMP"""""""MM MM'""""'YMM M""MMMMM""M
+M  mmmm. `M M' .mmm. `M M  mmmmm..M M' .mmmm  MM Mmmm  mmmM Mmmm  mmmM M' .mmmm  MM M' .mmm. `M M  MMMM' .M
+M  MMMMM  M M  MMMMM  M M.      `YM M         `M MMMM  MMMM MMMM  MMMM M         `M M  MMMMMooM M       .MM
+M  MMMMM  M M  MMMMM  M MMMMMMM.  M M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM M  MMMMMMMM M  MMMb. YM
+M  MMMM' .M M. `MMM' .M M. .MMM'  M M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM M. `MMM' .M M  MMMMb  M
+M       .MM MMb     dMM Mb.     .dM M  MMMMM  MM MMMM  MMMM MMMM  MMMM M  MMMMM  MM MM.     .dM M  MMMMM  M
+MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMMM MMMMMMMMMM MMMMMMMMMM MMMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM
 
 XXX_Stalker
 当前版本: {version}
 输入 'help' 查看帮助
-{"=" * 56}"""
+{"=" * 107}'''
 
 help = """
 [帮助信息]
@@ -67,6 +66,7 @@ def attack_dos_main():
             elif while_input == "3":
                 from DOS.Agent_dos import Agent_dos_main
                 Agent_dos_main()
-    elif confirm in ['n', 'no']:
+    else:
         print("已拒绝")
+        os.system("cls" if os.name == 'nt' else "clear")
         sys.exit()
