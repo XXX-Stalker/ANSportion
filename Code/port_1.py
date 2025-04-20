@@ -8,7 +8,7 @@ stop_scan = False
 
 def signal_handler(sig, frame):
     global stop_scan
-    print("\n用户手动终止扫描。")
+    print("\n用户手动终止扫描")
     stop_scan = True
 
 def is_port_open(ip, port):
@@ -61,4 +61,4 @@ def port_1_main():
     if open_ports:
         print(f"开放的端口: {', '.join(map(str, open_ports))}")
     else:
-        print("没有找到开放的端口。")
+        print("没有找到开放的端口")
