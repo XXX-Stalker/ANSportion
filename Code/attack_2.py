@@ -70,7 +70,7 @@ def send_sms_verification(user_input, interfaces):
                         continue
 
                     if response is None:
-                        continue  # 如果请求超时或失败，跳过当前接口
+                        continue
 
                     if response.status_code == 200:
                         print(Fore.GREEN + "成功发送验证码")
@@ -92,7 +92,6 @@ def load_interfaces():
             content = f.read()
             content = re.sub(r',\s*}', '}', content)
             content = re.sub(r',\s*]', ']', content)
-            # 这里不再强制将内容包装成列表
             return json.loads(content)
     except Exception as e:
         print(Fore.RED + f"加载接口配置失败: {e}")
