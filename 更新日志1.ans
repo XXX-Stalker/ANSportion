@@ -1,10 +1,13 @@
-1.1.8:
+1.1.9:
  - 内容:
-  - ANSportion.py 修改了界面
   - 修复了插件功能
+  - ANSportion.py 修改了初始化部分
  - 修改过或新增的文件'&'或文件夹'*':
   - ANSportion.py - 修改 &
-  - SetUp.py - 修改 &
-  - DOS - 新增 *
-  - CC - 新增 *
-  - Code - 修改 *
+  - Code/attack_1.py - 修改 &
+  - Code/attack_2.py - 修改 &
+  - Code/attack_CC.py - 修改 &
+  - Code/port_1.py - 修改 &
+  - cc/thread_cc.py - 修改 &
+  - Code/use_1.py - 删除 &
+  - DOS - 删除 *
