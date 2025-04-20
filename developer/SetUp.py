@@ -3,7 +3,7 @@ def package_with_pyinstaller_api():
     opts = [
         "--onefile",
         "--icon", "picture/ANSportion.ico",
-        "--name", "ANSportion1.1.8-Pro",
+        "--name", "ANSportion1.1.9-Pro",
         
         "ANSportion.py",
 
@@ -11,9 +11,7 @@ def package_with_pyinstaller_api():
         
         "Code/plugins.py",      
 
-        "Code/use_1.py",
-
-        "Code/attack_DOS.py",
+        "Code/attack_1.py",
         "Code/attack_2.py",
         "Code/attack_CC.py",
 
@@ -42,10 +40,6 @@ def package_with_pyinstaller_api():
         "CC/__init__.py",
         "CC/cc.py",
         "CC/thread_cc.py",
-
-        "DOS/__init__.py",
-        "DOS/thread_dos.py",
-        "DOS/Multi_Packet_dos.py",
         ]
     try:
         run(opts)
