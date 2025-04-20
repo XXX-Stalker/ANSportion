@@ -62,6 +62,5 @@ def attack_cc_main():
                 from CC.thread_cc import thread_cc_main
                 thread_cc_main()
     else:
-        print("已拒绝")
+        print("操作已取消")
         os.system("cls" if os.name == 'nt' else "clear")
-        sys.exit()
