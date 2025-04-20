@@ -24,8 +24,8 @@ def load_headers():
         'Connection': 'keep-alive'
     }
     try:
-        if os.path.exists("CC\\cc_headers.txt"):
-            with open("CC\\cc_headers.txt", "r", encoding="utf-8") as f:
+        if os.path.exists("cc_headers.txt"):
+            with open("cc_headers.txt", "r", encoding="utf-8") as f:
                 for line in f:
                     if ':' in line:
                         key, value = line.strip().split(':', 1)
@@ -74,10 +74,10 @@ def get_user_input():
         print("错误: URL必须以http://或https://开头")
     while True:
         try:
-            threads_num = int(input("设置线程数 (1-1000000): "))
-            if 1 <= threads_num <= 1000000:
+            threads_num = int(input("设置线程数 (1-1000): "))
+            if 1 <= threads_num <= 1000:
                 break
-            print("错误: 线程数必须在1 ~ 1000000之间")
+            print("错误: 线程数必须在1 ~ 1000之间")
         except ValueError:
             print("错误: 请输入有效数字")
     while True:
@@ -95,9 +95,7 @@ exit_flag = False
 
 def main():
     global exit_flag
-    # 获取用户输入
     url, threads_num, interval = get_user_input()
-    # 显示攻击配置
     clear_screen()
     print("\n[攻击配置]")
     print("-" * 40)
